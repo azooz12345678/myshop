@@ -1,5 +1,5 @@
 h2 {
-    color: #662ba2;
+    color: #662ba2 !important;
 }
 
 /* global styles ------------------------------------------------------------------------------------ */
@@ -66,4 +66,5 @@ body.login-page .btn-primary:hover { background: #ffc107; color: #000; }
 /* page backgrounds --------------------------------------------------------------------------------- */
 body.index { background: #fafafd; }
 body.products, body.cart, body.about, body.contact { background: #f5f5f5; }
+
 
