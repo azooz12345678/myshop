@@ -57,26 +57,6 @@ function removeFromCart(index) {
 
 window.onload = loadCart;
 
-
-// products-------------------------------------------------------------------
-function addToCart(name, price, image) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push({name, price, image});
-    localStorage.setItem("cart", JSON.stringify(cart));
-    alert(name + " added to cart!");
-}
-
-document.querySelectorAll(".btn-buy").forEach((button) => {
-    button.addEventListener("click", () => {
-        let card = button.closest(".featured-product, .product-card");
-        let name = card.querySelector("h5").innerText;
-        let price = parseFloat(card.querySelector("p").innerText.replace("$",""));
-        let image = card.querySelector("img").getAttribute("src");
-        addToCart(name, price, image);
-    });
-});
-
-
 // login-------------------------------------------------------------------------
 const loginTab = document.getElementById("login-tab");
 const registerTab = document.getElementById("register-tab");
@@ -130,3 +110,4 @@ if(!pattern.test(email)){ alert('Enter a valid email.'); return false;}
 alert('Message sent successfully!');
 return false;
 }
+
